@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:theme="@style/dec" package="AdvertiserOverlay.AdvertiserOverlay" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
+  <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="19" />
+  <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <application android:label="AdvertiserOverlay" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/icon">
+    <activity android:icon="@drawable/icon" android:label="AdvertiserOverlay" android:name="md592603916f42a45ceaefbd67ec4e34d10.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:label="Configuración" android:name="md59d7b949c32d6bb58f02a4a7c674ff9cf.AppSettings" />
+    <service android:name="md50e8f6facd1e674d417dbda03c4184292.BackgroundService">
+      <intent-filter>
+        <action android:name="DecathlonService.Advertising" />
+      </intent-filter>
+    </service>
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="AdvertiserOverlay.AdvertiserOverlay.mono.MonoRuntimeProvider.__mono_init__" />
+  </application>
+  <meta-data android:name="android.support.VERSION" android:value="25.3.1" />
+</manifest>

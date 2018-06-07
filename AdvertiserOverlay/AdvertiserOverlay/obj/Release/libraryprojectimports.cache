@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Paths>
+  <Jars></Jars>
+  <ResolvedResourceDirectories>
+    <ResolvedResourceDirectory>E:\Users\Alex\Documents\Visual Studio 2017\Projects\AdvertiserOverlay\AdvertiserOverlay\obj\Release\__library_projects__\Realm.DataBinding\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>E:\Users\Alex\Documents\Visual Studio 2017\Projects\AdvertiserOverlay\AdvertiserOverlay\obj\Release\__library_projects__\Xamarin.Android.Support.v7.AppCompat\library_project_imports\res</ResolvedResourceDirectory>
+  </ResolvedResourceDirectories>
+  <ResolvedAssetDirectories>
+    <ResolvedAssetDirectory>obj\Release\__library_projects__\Realm.DataBinding\library_project_imports\assets</ResolvedAssetDirectory>
+  </ResolvedAssetDirectories>
+  <ResolvedEnvironmentFiles />
+  <ResolvedResourceDirectoryStamps>
+    <ResolvedResourceDirectoryStamp>E:\Users\Alex\Documents\Visual Studio 2017\Projects\AdvertiserOverlay\AdvertiserOverlay\obj\Release\__library_projects__\Realm.DataBinding.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>E:\Users\Alex\Documents\Visual Studio 2017\Projects\AdvertiserOverlay\AdvertiserOverlay\obj\Release\__library_projects__\Xamarin.Android.Support.v7.AppCompat.stamp</ResolvedResourceDirectoryStamp>
+  </ResolvedResourceDirectoryStamps>
+</Paths>
