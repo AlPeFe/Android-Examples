@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="GamDroidUpgrade.GamDroidUpgrade" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
+  <!--suppress UsesMinSdkAttributes-->
+  <uses-sdk android:minSdkVersion="16" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <application android:theme="@style/egamdroid" android:allowBackup="true" android:label="@string/app_name" android:name="android.app.Application" android:debuggable="true">
+    <activity android:label="GamDroidUpgrade" android:name="md5d60116fc7aaac6acd09be97c00eb3265.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <service android:name="md54304ee28121b3d54346b003d67cb42b8.GamRetrieve">
+      <intent-filter>
+        <action android:name="gam.WebService" />
+      </intent-filter>
+    </service>
+    <service android:name="md54304ee28121b3d54346b003d67cb42b8.GamSend">
+      <intent-filter>
+        <action android:name="outService" />
+      </intent-filter>
+    </service>
+    <activity android:label="DetailActivity" android:name="md5823c408df52dce1461642ca1a1a78db1.DetailActivity" />
+    <activity android:label="MenuActivity" android:name="md5823c408df52dce1461642ca1a1a78db1.MenuActivity" />
+    <activity android:label="MessageActivity" android:name="md5823c408df52dce1461642ca1a1a78db1.MessageActivity" />
+    <activity android:label="ServiceActivity" android:name="md5823c408df52dce1461642ca1a1a78db1.ServiceActivity" />
+    <activity android:label="SettingsActivity" android:name="md5823c408df52dce1461642ca1a1a78db1.SettingsActivity" />
+    <receiver android:enabled="true" android:name="md58e21d3340c8f0fd313179931c9b5acc7.ChargeStatusReceiver">
+      <intent-filter>
+        <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+        <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+      </intent-filter>
+    </receiver>
+    <service android:name="md5b6966692a0242d3f4e5a39c1db0f510f.LocationService" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="GamDroidUpgrade.GamDroidUpgrade.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.GamDroidUpgrade.GamDroidUpgrade" />
+      </intent-filter>
+    </receiver>
+  </application>
+  <meta-data android:name="android.support.VERSION" android:value="25.3.1" />
+</manifest>
