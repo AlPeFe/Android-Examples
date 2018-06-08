@@ -22,3 +22,7 @@ Pequeña aplicación que devuelve X lugares proximos a la localización actual u
 ---Android Sensors
 
 Recoger los datos del sensor de gravedad y detección de estado de carga 
+
+---GDroid
+
+Aplicación Android, SQLite, Dependency Injection para acceso a Base de datos, Servicios en segundo plano etc..
