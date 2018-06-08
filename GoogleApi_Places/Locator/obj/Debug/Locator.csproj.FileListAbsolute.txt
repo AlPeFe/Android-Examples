@@ -1,0 +1,15 @@
+c:\Users\Alex\documents\visual studio 2017\Projects\B\Locator\bin\Debug\Locator.dll
+c:\Users\Alex\documents\visual studio 2017\Projects\B\Locator\bin\Debug\Locator.pdb
+c:\Users\Alex\documents\visual studio 2017\Projects\B\Locator\bin\Debug\GoogleApi.dll
+c:\Users\Alex\documents\visual studio 2017\Projects\B\Locator\bin\Debug\Newtonsoft.Json.dll
+c:\Users\Alex\documents\visual studio 2017\Projects\B\Locator\bin\Debug\GoogleApi.xml
+c:\Users\Alex\documents\visual studio 2017\Projects\B\Locator\bin\Debug\Newtonsoft.Json.xml
+c:\Users\Alex\documents\visual studio 2017\Projects\B\Locator\obj\Debug\Locator.csprojResolveAssemblyReference.cache
+c:\Users\Alex\documents\visual studio 2017\Projects\B\Locator\obj\Debug\Locator.dll
+c:\Users\Alex\documents\visual studio 2017\Projects\B\Locator\obj\Debug\Locator.pdb
+C:\Users\Alex\documents\visual studio 2017\Projects\B\Locator\obj\Debug\Locator.dll.mdb
+C:\Users\Alex\documents\visual studio 2017\Projects\B\Locator\bin\Debug\Locator.dll.mdb
+C:\Users\Alex\documents\visual studio 2017\Projects\B\Locator\obj\Debug\Locator.dll.mdb
+C:\Users\Alex\documents\visual studio 2017\Projects\B\Locator\bin\Debug\Locator.dll.mdb
+C:\Users\Alex\documents\visual studio 2017\Projects\B\Locator\obj\Debug\Locator.dll.mdb
+C:\Users\Alex\documents\visual studio 2017\Projects\B\Locator\bin\Debug\Locator.dll.mdb
