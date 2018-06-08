@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">AndroidRecyclerViewGridView</string>
+  <string name="action_settings">Settings</string>
+  <string name="action_refresh">Settings</string>
+  <string name="action_new">Settings</string>
+  <string name="logo_desc">App logo</string>
+  <string name="menu_caption">Nigeria</string>
+</resources>

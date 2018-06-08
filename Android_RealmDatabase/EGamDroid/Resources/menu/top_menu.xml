@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
+  <item
+      android:id="@+id/Msg"
+      android:icon="@drawable/ic_message_black"
+      app:showAsAction="ifRoom|withText"
+      android:title="Mensajes"
+      android:right="20dp"/>
+  <item
+     android:id="@+id/Srv"
+     android:icon="@drawable/ic_view_list_black"
+     app:showAsAction="ifRoom|withText"
+     android:title="Servicios" 
+     android:right="20dp"/>
+  
+  <item
+    android:id="@+id/Cfg"
+    android:icon="@drawable/ic_settings_black"
+    app:showAsAction="never"
+    android:title="Configuración" />
+  <item
+    android:id="@+id/Con"
+    android:icon="@drawable/ic_settings_black"
+    app:showAsAction="never"
+    android:title="Contactos" />
+  <item
+    android:id="@+id/Hel"
+    android:icon="@drawable/ic_settings_black"
+    app:showAsAction="never"
+    android:title="Ayuda" />
+  
+</menu>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+  <android.support.v7.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/msgColor"
+        android:padding="8dp">
+      <View android:layout_width="2dp"
+      android:layout_height="match_parent"
+      android:background="#000"/>
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:textStyle="bold"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:textColor="#333333"
+          android:text="Caption"
+          android:id="@+id/msgTitle"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginLeft="4dp" />
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="150dp"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:textColor="#333333"
+          android:text="Caption"
+          android:id="@+id/msgContent"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginLeft="4dp" />
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:textStyle="bold"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:textColor="#cccccc"
+          android:textSize="29dp"
+          android:text="Caption"
+          android:id="@+id/msgData"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginLeft="4dp" />
+    </LinearLayout>
+  </android.support.v7.widget.CardView>
+</FrameLayout>
