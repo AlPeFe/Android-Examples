@@ -26,3 +26,7 @@ Recoger los datos del sensor de gravedad y detección de estado de carga
 ---GDroid
 
 Aplicación Android, SQLite, Dependency Injection para acceso a Base de datos, Servicios en segundo plano etc..
+
+---Android RealmDatabase
+
+Aplicación Android que usa como base de datos "Realm" 
