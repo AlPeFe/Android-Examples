@@ -17,4 +17,8 @@ Implementación ILocationListener para una aplicación Android
 
 ---Google Api Places
 
-Pequeña aplicación que devuelve X lugares proximos a la localización actual usa la API de google Places, implementa un adapter y un viewholder para mostrar los datos 
+Pequeña aplicación que devuelve X lugares proximos a la localización actual usa la API de google Places, implementa un adapter y un viewholder para mostrar los datos
+
+---Android Sensors
+
+Recoger los datos del sensor de gravedad y detección de estado de carga 
