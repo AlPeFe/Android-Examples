@@ -1,0 +1,4 @@
+SpeechTest.MainActivity, SpeechTest;md537692b013029334b6f2eef48b4715c95.MainActivity
+SpeechTest.MainActivity, SpeechTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md537692b013029334b6f2eef48b4715c95.MainActivity
+SpeechTest.MainActivity;md537692b013029334b6f2eef48b4715c95.MainActivity
+speechtest.MainActivity;md537692b013029334b6f2eef48b4715c95.MainActivity
