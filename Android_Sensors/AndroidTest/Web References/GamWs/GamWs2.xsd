@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary.Tramas" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary.Tramas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://roma/GamWs/GamWs.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary" />
+  <xs:complexType name="ArrayOfTrama">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Trama" nillable="true" type="tns:Trama" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTrama" nillable="true" type="tns:ArrayOfTrama" />
+  <xs:complexType name="Trama">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccioMis" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataMis" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NumMis" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Trama" nillable="true" type="tns:Trama" />
+  <xs:complexType name="Checklist">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Orden" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Pregunta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sys215" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnidadesMinimas" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Checklist" nillable="true" type="tns:Checklist" />
+  <xs:complexType name="CodDes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CodDes" nillable="true" type="tns:CodDes" />
+  <xs:complexType name="TAnulacionServicio">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Trama">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="NumSrv" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TAnulacionServicio" nillable="true" type="tns:TAnulacionServicio" />
+  <xs:complexType name="TMensaje">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Trama">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodiCla" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TMensaje" nillable="true" type="tns:TMensaje" />
+  <xs:complexType name="TMensajePersonalizado">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Trama">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodiTrb" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TMensajePersonalizado" nillable="true" type="tns:TMensajePersonalizado" />
+  <xs:complexType name="TNombreTrabajador">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary" base="q1:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodigoChecklist" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NombreTrabajador" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TNombreTrabajador" nillable="true" type="tns:TNombreTrabajador" />
+  <xs:complexType name="TServicio">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Trama">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AcompayantSiNo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Apellidos" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Cip" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodiDig" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodiSin" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodiTra" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodiTrm" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Conflictivitat" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DadesTargeta" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DataIniciSrv" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DataLloc" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DataNeix" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DirFinal" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DirInici" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Dni" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Edad" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EsTornadaSiNo" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Estat" type="xs:int" />
+          <xs:element minOccurs="0" name="HombreSiNo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Nass" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumSrv" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OxigenSiNo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="P10" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PobFinal" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PobInici" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrvFinal" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrvInici" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Referencia" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TeTornadaSiNo" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Telefono" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TipusSrv" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Unitats_Demanades" type="xs:int" />
+          <xs:element minOccurs="0" name="X1" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="X2" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="Y1" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="Y2" nillable="true" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TServicio" nillable="true" type="tns:TServicio" />
+  <xs:complexType name="TSincroAnulaciones">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TSincroBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TSincroAnulaciones" nillable="true" type="tns:TSincroAnulaciones" />
+  <xs:complexType name="TSincroBase">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Trama">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ListCodDes" nillable="true" type="tns:ArrayOfCodDes" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TSincroBase" nillable="true" type="tns:TSincroBase" />
+  <xs:complexType name="ArrayOfCodDes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CodDes" nillable="true" type="tns:CodDes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCodDes" nillable="true" type="tns:ArrayOfCodDes" />
+  <xs:complexType name="TSincroChecklist">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Trama">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ListCheckList" nillable="true" type="tns:ArrayOfChecklist" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TSincroChecklist" nillable="true" type="tns:TSincroChecklist" />
+  <xs:complexType name="ArrayOfChecklist">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Checklist" nillable="true" type="tns:Checklist" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfChecklist" nillable="true" type="tns:ArrayOfChecklist" />
+  <xs:complexType name="TSincroClaves">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TSincroBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TSincroClaves" nillable="true" type="tns:TSincroClaves" />
+  <xs:complexType name="TSincroGastos">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Trama">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ListGastos" nillable="true" type="tns:ArrayOfTGastos" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TSincroGastos" nillable="true" type="tns:TSincroGastos" />
+  <xs:complexType name="ArrayOfTGastos">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TGastos" nillable="true" type="tns:TGastos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTGastos" nillable="true" type="tns:ArrayOfTGastos" />
+  <xs:complexType name="TGastos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescripcionQuantitat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KmSiNo" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TGastos" nillable="true" type="tns:TGastos" />
+  <xs:complexType name="TSincroIncidenciaServicio">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TSincroBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TSincroIncidenciaServicio" nillable="true" type="tns:TSincroIncidenciaServicio" />
+  <xs:complexType name="TSincroIncidenciaVehiculo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TSincroBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TSincroIncidenciaVehiculo" nillable="true" type="tns:TSincroIncidenciaVehiculo" />
+  <xs:complexType name="TSincroMateriales">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TSincroBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TSincroMateriales" nillable="true" type="tns:TSincroMateriales" />
+  <xs:complexType name="TSincroParadas">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TSincroBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TSincroParadas" nillable="true" type="tns:TSincroParadas" />
+  <xs:complexType name="TSincroAgenda">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TSincroBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TSincroAgenda" nillable="true" type="tns:TSincroAgenda" />
+  <xs:complexType name="TUpdate">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Trama">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TUpdate" nillable="true" type="tns:TUpdate" />
+  <xs:complexType name="TSincroTerminalParadas">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary" base="q2:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ListCodDes" nillable="true" type="tns:ArrayOfCodDes" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TSincroTerminalParadas" nillable="true" type="tns:TSincroTerminalParadas" />
+  <xs:complexType name="TSincroTerminalAgenda">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary" base="q3:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ListCodDes" nillable="true" type="tns:ArrayOfCodDes" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TSincroTerminalAgenda" nillable="true" type="tns:TSincroTerminalAgenda" />
+  <xs:complexType name="THuellaTrabajador">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Trama">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="codi_trb" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="numero_dit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="obs" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="plantilla" nillable="true" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="THuellaTrabajador" nillable="true" type="tns:THuellaTrabajador" />
+  <xs:complexType name="TNombreVehiculo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary" base="q4:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodigoVehiculo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DescripcionVehiculo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaCompraVehiculo" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="InactiuSiNoVehiculo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="KmActualesVehiculo" type="xs:int" />
+          <xs:element minOccurs="0" name="MatriculaVehiculo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TNombreVehiculo" nillable="true" type="tns:TNombreVehiculo" />
+  <xs:complexType name="TEnvioLogsAUTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Trama">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TEnvioLogsAUTO" nillable="true" type="tns:TEnvioLogsAUTO" />
+  <xs:complexType name="TActivarHuellaGamdroid">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Trama">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TActivarHuellaGamdroid" nillable="true" type="tns:TActivarHuellaGamdroid" />
+  <xs:complexType name="TListaServicios">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary" base="q5:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ListaServicios" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TListaServicios" nillable="true" type="tns:TListaServicios" />
+  <xs:complexType name="ArrayOfTHuellaTrabajador">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="THuellaTrabajador" nillable="true" type="tns:THuellaTrabajador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTHuellaTrabajador" nillable="true" type="tns:ArrayOfTHuellaTrabajador" />
+  <xs:complexType name="TRegistroDIR">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary" base="q6:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="auxiliar" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="codi_dir" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="des" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="dom" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pob" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TRegistroDIR" nillable="true" type="tns:TRegistroDIR" />
+  <xs:complexType name="TRegistroServicio">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary" base="q7:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="TipoServicio" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="acompanante" type="xs:int" />
+          <xs:element minOccurs="0" name="ayudante" type="xs:int" />
+          <xs:element minOccurs="0" name="cip" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="codi_Empresa" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="codi_dig" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="codi_dir_destino" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="codi_dir_origen" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="codi_lot" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="codi_pob_destino" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="codi_pob_origen" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="codi_tra" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="codi_tvh" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cognoms" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="data_inici_srv" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="data_lloc" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="data_vuelta" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="domicilio_Origen" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="domicilio_destino" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="nass" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="nom" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="num_Srv" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="obs" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="oxigeno" type="xs:int" />
+          <xs:element minOccurs="0" name="poliza" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="rampa" type="xs:int" />
+          <xs:element minOccurs="0" name="referencia" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="te_tornada_si_no" type="xs:int" />
+          <xs:element minOccurs="0" name="telefono" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="tieneVuelta" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TRegistroServicio" nillable="true" type="tns:TRegistroServicio" />
+  <xs:complexType name="TNombreEmpresaDefault">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary" base="q8:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="NombreEmpresaDefault" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TNombreEmpresaDefault" nillable="true" type="tns:TNombreEmpresaDefault" />
+  <xs:complexType name="ArrayOfTNombreVehiculo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TNombreVehiculo" nillable="true" type="tns:TNombreVehiculo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTNombreVehiculo" nillable="true" type="tns:ArrayOfTNombreVehiculo" />
+</xs:schema>

@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://roma/GamWs/GamWs.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary" />
+  <xs:import schemaLocation="http://roma/GamWs/GamWs.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary.Tramas" />
+  <xs:element name="TramasGetByCodiVhi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipusMis" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TramasGetByCodiVhiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary" minOccurs="0" name="TramasGetByCodiVhiResult" nillable="true" type="q1:ListOfTramas" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TramaConfirm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="numMis" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TramaConfirmResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary" minOccurs="0" name="TramaConfirmResult" nillable="true" type="q2:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EstatServicio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accioMis" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="numSrv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiAnu" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dataMis" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="lat" type="xs:double" />
+        <xs:element minOccurs="0" name="lng" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EstatServicioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary" minOccurs="0" name="EstatServicioResult" nillable="true" type="q3:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EstatFoto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accioMis" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="numSrv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiAnu" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dataMis" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="lat" type="xs:double" />
+        <xs:element minOccurs="0" name="lng" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EstatFotoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary" minOccurs="0" name="EstatFotoResult" nillable="true" type="q4:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Mensaje">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiCla" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="observaciones" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dataMis" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="lat" type="xs:double" />
+        <xs:element minOccurs="0" name="lng" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MensajeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary" minOccurs="0" name="MensajeResult" nillable="true" type="q5:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InicioTurno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiXof" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiAju" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="km" type="xs:double" />
+        <xs:element minOccurs="0" name="dataMis" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="lat" type="xs:double" />
+        <xs:element minOccurs="0" name="lng" type="xs:double" />
+        <xs:element minOccurs="0" name="Imei" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InicioTurnoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary" minOccurs="0" name="InicioTurnoResult" nillable="true" type="q6:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FinalTurno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiXof" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiAju" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="km" type="xs:double" />
+        <xs:element minOccurs="0" name="dataMis" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="lat" type="xs:double" />
+        <xs:element minOccurs="0" name="lng" type="xs:double" />
+        <xs:element minOccurs="0" name="Imei" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FinalTurnoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary" minOccurs="0" name="FinalTurnoResult" nillable="true" type="q7:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Parada">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiXof" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiAju" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoParada" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="inicioFin" type="xs:int" />
+        <xs:element minOccurs="0" name="dataMis" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="lat" type="xs:double" />
+        <xs:element minOccurs="0" name="lng" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ParadaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary" minOccurs="0" name="ParadaResult" nillable="true" type="q8:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Gastos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accioMis" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiXof" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiAju" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoGasto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="km" type="xs:double" />
+        <xs:element minOccurs="0" name="litros" type="xs:double" />
+        <xs:element minOccurs="0" name="importe" type="xs:double" />
+        <xs:element minOccurs="0" name="dataMis" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="lat" type="xs:double" />
+        <xs:element minOccurs="0" name="lng" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GastosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary" minOccurs="0" name="GastosResult" nillable="true" type="q9:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IncidenciaVehiculo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiXof" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiAju" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoIncidencia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="observaciones" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dataMis" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="lat" type="xs:double" />
+        <xs:element minOccurs="0" name="lng" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IncidenciaVehiculoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary" minOccurs="0" name="IncidenciaVehiculoResult" nillable="true" type="q10:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IncidenciaServicio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="numSrv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiXof" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoIncidencia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiCla" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="observaciones" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dataMis" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="lat" type="xs:double" />
+        <xs:element minOccurs="0" name="lng" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IncidenciaServicioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary" minOccurs="0" name="IncidenciaServicioResult" nillable="true" type="q11:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitudDiaPersonal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiTrb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="observaciones" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dataSeleccionada" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dataMis" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="lat" type="xs:double" />
+        <xs:element minOccurs="0" name="lng" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitudDiaPersonalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary" minOccurs="0" name="SolicitudDiaPersonalResult" nillable="true" type="q12:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Checklist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accioMis" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiXof" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiAju" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sys215" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="test1" type="xs:int" />
+        <xs:element minOccurs="0" name="test2" type="xs:int" />
+        <xs:element minOccurs="0" name="observaciones" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="numeroEnvio" type="xs:int" />
+        <xs:element minOccurs="0" name="unidadesPedidas" type="xs:int" />
+        <xs:element minOccurs="0" name="dataMis" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="lat" type="xs:double" />
+        <xs:element minOccurs="0" name="lng" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChecklistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary" minOccurs="0" name="ChecklistResult" nillable="true" type="q13:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNomTrbByCodi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiTrb" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNomTrbByCodiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary.Tramas" minOccurs="0" name="GetNomTrbByCodiResult" nillable="true" type="q14:TNombreTrabajador" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNomTrbByCodiEgar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiTrb" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNomTrbByCodiEgarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary.Tramas" minOccurs="0" name="GetNomTrbByCodiEgarResult" nillable="true" type="q15:TNombreTrabajador" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLista_Servicios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiTrb" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLista_ServiciosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary.Tramas" minOccurs="0" name="GetLista_ServiciosResult" nillable="true" type="q16:TListaServicios" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLista_Lotes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiTrb" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLista_LotesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary.Tramas" minOccurs="0" name="GetLista_LotesResult" nillable="true" type="q17:TListaServicios" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLista_Direcciones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiTrb" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLista_DireccionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary.Tramas" minOccurs="0" name="GetLista_DireccionesResult" nillable="true" type="q18:TListaServicios" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLista_Poblaciones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiTrb" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLista_PoblacionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary.Tramas" minOccurs="0" name="GetLista_PoblacionesResult" nillable="true" type="q19:TListaServicios" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLista_DIG">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiTrb" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLista_DIGResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary.Tramas" minOccurs="0" name="GetLista_DIGResult" nillable="true" type="q20:TListaServicios" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLista_TRA">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiTrb" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLista_TRAResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary.Tramas" minOccurs="0" name="GetLista_TRAResult" nillable="true" type="q21:TListaServicios" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLista_TVH">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiTrb" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLista_TVHResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary.Tramas" minOccurs="0" name="GetLista_TVHResult" nillable="true" type="q22:TListaServicios" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLista_Empresa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiTrb" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLista_EmpresaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary.Tramas" minOccurs="0" name="GetLista_EmpresaResult" nillable="true" type="q23:TListaServicios" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListaGet_TRB_HUE">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListaGet_TRB_HUEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary.Tramas" minOccurs="0" name="ListaGet_TRB_HUEResult" nillable="true" type="q24:ArrayOfTHuellaTrabajador" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendCoordinatesBatch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cadPosiciones" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendCoordinatesBatchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary" minOccurs="0" name="SendCoordinatesBatchResult" nillable="true" type="q25:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendCoordinates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dataMis" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="lat" type="xs:double" />
+        <xs:element minOccurs="0" name="lng" type="xs:double" />
+        <xs:element minOccurs="0" name="velocidad" type="xs:int" />
+        <xs:element minOccurs="0" name="satelites" type="xs:int" />
+        <xs:element minOccurs="0" name="bateriaLevel" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendCoordinatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary" minOccurs="0" name="SendCoordinatesResult" nillable="true" type="q26:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendEmail_ControlLicencias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="desCliente" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendEmail_ControlLicenciasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary" minOccurs="0" name="SendEmail_ControlLicenciasResult" nillable="true" type="q27:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SincronizarParadas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SincronizarParadasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary.Tramas" minOccurs="0" name="SincronizarParadasResult" nillable="true" type="q28:TSincroTerminalParadas" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SincronizarAgenda">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SincronizarAgendaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary.Tramas" minOccurs="0" name="SincronizarAgendaResult" nillable="true" type="q29:TSincroTerminalAgenda" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SincronizarControlLicencias">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SincronizarControlLicenciasResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendVersion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="version" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendVersionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDatosDIRByCodi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiDir" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDatosDIRByCodiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary.Tramas" minOccurs="0" name="GetDatosDIRByCodiResult" nillable="true" type="q30:TRegistroDIR" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDatosSRVByCodi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiSrv" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDatosSRVByCodiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary.Tramas" minOccurs="0" name="GetDatosSRVByCodiResult" nillable="true" type="q31:TRegistroServicio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmpresaDefault">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmpresaDefaultResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary.Tramas" minOccurs="0" name="GetEmpresaDefaultResult" nillable="true" type="q32:TNombreEmpresaDefault" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetChekpoint">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="value" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetChekpointResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetChekpointResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Unban">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnbanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UnbanResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SRV_UpdateServicio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="num_Mis" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipus_Mis" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accio_Mis" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="num_Srv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="data_Mis" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codi_Vhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codi_Xof" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="data_Inici_Srv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="data_Lloc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dir_Inici" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pob_Inici" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prvInici" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cognoms" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dir_Final" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pob_Final" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prvFinal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codi_Pac" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codi_Tra" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codi_Dig" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codi_Emp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codi_Lot" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipus_Srv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tel_Srv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="referencia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nass" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="obs" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="estat" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codi_Tvh" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="oxigeno" type="xs:int" />
+        <xs:element minOccurs="0" name="rampa" type="xs:int" />
+        <xs:element minOccurs="0" name="acompanante" type="xs:int" />
+        <xs:element minOccurs="0" name="ayudante" type="xs:int" />
+        <xs:element minOccurs="0" name="poliza" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TieneVuelta" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="data_Vuelta" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SRV_UpdateServicioResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Missatges_NewServicio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="num_Mis" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipus_Mis" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accio_Mis" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="num_Srv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="data_Mis" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codi_Vhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codi_Xof" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="data_Inici_Srv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="data_Lloc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dir_Inici" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pob_Inici" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prvInici" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cognoms" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dir_Final" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pob_Final" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prvFinal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codi_Pac" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codi_Tra" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codi_Dig" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codi_Emp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codi_Lot" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipus_Srv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tel_Srv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="referencia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nass" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="obs" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="estat" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codi_Tvh" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="oxigeno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rampa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="acompanante" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ayudante" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="poliza" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TieneVuelta" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="data_Vuelta" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Missatges_NewServicioResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Missatges_NewParadaBus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="num_Mis" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipus_Mis" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accio_Mis" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="num_Srv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="data_Mis" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codi_Vhi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codi_Xof" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="data_Inici_Srv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="data_Lloc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="subeAndando" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="subeEnSilla" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bajaAndando" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bajaEnSilla" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parada" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="x" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="y" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="obs" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Missatges_NewParadaBusResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListaGetNomVhiByCodi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListaGetNomVhiByCodiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary.Tramas" minOccurs="0" name="ListaGetNomVhiByCodiResult" nillable="true" type="q33:ArrayOfTNombreVehiculo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnvioLogTablet_Osoft">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiVhi" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnvioLogTablet_OsoftResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

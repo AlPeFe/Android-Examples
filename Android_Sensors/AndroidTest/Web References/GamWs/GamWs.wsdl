@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="GamWs" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://roma/GamWs/GamWs.svc?xsd=xsd3" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://roma/GamWs/GamWs.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://roma/GamWs/GamWs.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary" />
+      <xsd:import schemaLocation="http://roma/GamWs/GamWs.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GamWsServiceLibrary.Tramas" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IGamWs_TramasGetByCodiVhi_InputMessage">
+    <wsdl:part name="parameters" element="tns:TramasGetByCodiVhi" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_TramasGetByCodiVhi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TramasGetByCodiVhiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_TramaConfirm_InputMessage">
+    <wsdl:part name="parameters" element="tns:TramaConfirm" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_TramaConfirm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TramaConfirmResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_EstatServicio_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstatServicio" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_EstatServicio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstatServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_EstatFoto_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstatFoto" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_EstatFoto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstatFotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_Mensaje_InputMessage">
+    <wsdl:part name="parameters" element="tns:Mensaje" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_Mensaje_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MensajeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_InicioTurno_InputMessage">
+    <wsdl:part name="parameters" element="tns:InicioTurno" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_InicioTurno_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InicioTurnoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_FinalTurno_InputMessage">
+    <wsdl:part name="parameters" element="tns:FinalTurno" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_FinalTurno_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FinalTurnoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_Parada_InputMessage">
+    <wsdl:part name="parameters" element="tns:Parada" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_Parada_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ParadaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_Gastos_InputMessage">
+    <wsdl:part name="parameters" element="tns:Gastos" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_Gastos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GastosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_IncidenciaVehiculo_InputMessage">
+    <wsdl:part name="parameters" element="tns:IncidenciaVehiculo" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_IncidenciaVehiculo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IncidenciaVehiculoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_IncidenciaServicio_InputMessage">
+    <wsdl:part name="parameters" element="tns:IncidenciaServicio" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_IncidenciaServicio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IncidenciaServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_SolicitudDiaPersonal_InputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitudDiaPersonal" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_SolicitudDiaPersonal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitudDiaPersonalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_Checklist_InputMessage">
+    <wsdl:part name="parameters" element="tns:Checklist" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_Checklist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChecklistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_GetNomTrbByCodi_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNomTrbByCodi" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_GetNomTrbByCodi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNomTrbByCodiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_GetNomTrbByCodiEgar_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNomTrbByCodiEgar" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_GetNomTrbByCodiEgar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNomTrbByCodiEgarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_GetLista_Servicios_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLista_Servicios" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_GetLista_Servicios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLista_ServiciosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_GetLista_Lotes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLista_Lotes" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_GetLista_Lotes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLista_LotesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_GetLista_Direcciones_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLista_Direcciones" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_GetLista_Direcciones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLista_DireccionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_GetLista_Poblaciones_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLista_Poblaciones" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_GetLista_Poblaciones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLista_PoblacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_GetLista_DIG_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLista_DIG" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_GetLista_DIG_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLista_DIGResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_GetLista_TRA_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLista_TRA" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_GetLista_TRA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLista_TRAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_GetLista_TVH_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLista_TVH" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_GetLista_TVH_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLista_TVHResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_GetLista_Empresa_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLista_Empresa" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_GetLista_Empresa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLista_EmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_ListaGet_TRB_HUE_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListaGet_TRB_HUE" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_ListaGet_TRB_HUE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListaGet_TRB_HUEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_SendCoordinatesBatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendCoordinatesBatch" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_SendCoordinatesBatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendCoordinatesBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_SendCoordinates_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendCoordinates" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_SendCoordinates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendCoordinatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_SendEmail_ControlLicencias_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendEmail_ControlLicencias" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_SendEmail_ControlLicencias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendEmail_ControlLicenciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_SincronizarParadas_InputMessage">
+    <wsdl:part name="parameters" element="tns:SincronizarParadas" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_SincronizarParadas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SincronizarParadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_SincronizarAgenda_InputMessage">
+    <wsdl:part name="parameters" element="tns:SincronizarAgenda" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_SincronizarAgenda_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SincronizarAgendaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_SincronizarControlLicencias_InputMessage">
+    <wsdl:part name="parameters" element="tns:SincronizarControlLicencias" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_SincronizarControlLicencias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SincronizarControlLicenciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_SendVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendVersion" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_SendVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_GetDatosDIRByCodi_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatosDIRByCodi" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_GetDatosDIRByCodi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatosDIRByCodiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_GetDatosSRVByCodi_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatosSRVByCodi" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_GetDatosSRVByCodi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatosSRVByCodiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_GetEmpresaDefault_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpresaDefault" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_GetEmpresaDefault_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpresaDefaultResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_SetChekpoint_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetChekpoint" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_SetChekpoint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetChekpointResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_Unban_InputMessage">
+    <wsdl:part name="parameters" element="tns:Unban" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_Unban_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnbanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_SRV_UpdateServicio_InputMessage">
+    <wsdl:part name="parameters" element="tns:SRV_UpdateServicio" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_SRV_UpdateServicio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SRV_UpdateServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_Missatges_NewServicio_InputMessage">
+    <wsdl:part name="parameters" element="tns:Missatges_NewServicio" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_Missatges_NewServicio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Missatges_NewServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_Missatges_NewParadaBus_InputMessage">
+    <wsdl:part name="parameters" element="tns:Missatges_NewParadaBus" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_Missatges_NewParadaBus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Missatges_NewParadaBusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_ListaGetNomVhiByCodi_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListaGetNomVhiByCodi" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_ListaGetNomVhiByCodi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListaGetNomVhiByCodiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_EnvioLogTablet_Osoft_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnvioLogTablet_Osoft" />
+  </wsdl:message>
+  <wsdl:message name="IGamWs_EnvioLogTablet_Osoft_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnvioLogTablet_OsoftResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IGamWs">
+    <wsdl:operation name="TramasGetByCodiVhi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/TramasGetByCodiVhi" message="tns:IGamWs_TramasGetByCodiVhi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/TramasGetByCodiVhiResponse" message="tns:IGamWs_TramasGetByCodiVhi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TramaConfirm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/TramaConfirm" message="tns:IGamWs_TramaConfirm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/TramaConfirmResponse" message="tns:IGamWs_TramaConfirm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstatServicio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/EstatServicio" message="tns:IGamWs_EstatServicio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/EstatServicioResponse" message="tns:IGamWs_EstatServicio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstatFoto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/EstatFoto" message="tns:IGamWs_EstatFoto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/EstatFotoResponse" message="tns:IGamWs_EstatFoto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Mensaje">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/Mensaje" message="tns:IGamWs_Mensaje_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/MensajeResponse" message="tns:IGamWs_Mensaje_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InicioTurno">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/InicioTurno" message="tns:IGamWs_InicioTurno_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/InicioTurnoResponse" message="tns:IGamWs_InicioTurno_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FinalTurno">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/FinalTurno" message="tns:IGamWs_FinalTurno_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/FinalTurnoResponse" message="tns:IGamWs_FinalTurno_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Parada">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/Parada" message="tns:IGamWs_Parada_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/ParadaResponse" message="tns:IGamWs_Parada_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Gastos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/Gastos" message="tns:IGamWs_Gastos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/GastosResponse" message="tns:IGamWs_Gastos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IncidenciaVehiculo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/IncidenciaVehiculo" message="tns:IGamWs_IncidenciaVehiculo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/IncidenciaVehiculoResponse" message="tns:IGamWs_IncidenciaVehiculo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IncidenciaServicio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/IncidenciaServicio" message="tns:IGamWs_IncidenciaServicio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/IncidenciaServicioResponse" message="tns:IGamWs_IncidenciaServicio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudDiaPersonal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/SolicitudDiaPersonal" message="tns:IGamWs_SolicitudDiaPersonal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/SolicitudDiaPersonalResponse" message="tns:IGamWs_SolicitudDiaPersonal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Checklist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/Checklist" message="tns:IGamWs_Checklist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/ChecklistResponse" message="tns:IGamWs_Checklist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNomTrbByCodi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/GetNomTrbByCodi" message="tns:IGamWs_GetNomTrbByCodi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/GetNomTrbByCodiResponse" message="tns:IGamWs_GetNomTrbByCodi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNomTrbByCodiEgar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/GetNomTrbByCodiEgar" message="tns:IGamWs_GetNomTrbByCodiEgar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/GetNomTrbByCodiEgarResponse" message="tns:IGamWs_GetNomTrbByCodiEgar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLista_Servicios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/GetLista_Servicios" message="tns:IGamWs_GetLista_Servicios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/GetLista_ServiciosResponse" message="tns:IGamWs_GetLista_Servicios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLista_Lotes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/GetLista_Lotes" message="tns:IGamWs_GetLista_Lotes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/GetLista_LotesResponse" message="tns:IGamWs_GetLista_Lotes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLista_Direcciones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/GetLista_Direcciones" message="tns:IGamWs_GetLista_Direcciones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/GetLista_DireccionesResponse" message="tns:IGamWs_GetLista_Direcciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLista_Poblaciones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/GetLista_Poblaciones" message="tns:IGamWs_GetLista_Poblaciones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/GetLista_PoblacionesResponse" message="tns:IGamWs_GetLista_Poblaciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLista_DIG">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/GetLista_DIG" message="tns:IGamWs_GetLista_DIG_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/GetLista_DIGResponse" message="tns:IGamWs_GetLista_DIG_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLista_TRA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/GetLista_TRA" message="tns:IGamWs_GetLista_TRA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/GetLista_TRAResponse" message="tns:IGamWs_GetLista_TRA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLista_TVH">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/GetLista_TVH" message="tns:IGamWs_GetLista_TVH_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/GetLista_TVHResponse" message="tns:IGamWs_GetLista_TVH_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLista_Empresa">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/GetLista_Empresa" message="tns:IGamWs_GetLista_Empresa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/GetLista_EmpresaResponse" message="tns:IGamWs_GetLista_Empresa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaGet_TRB_HUE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/ListaGet_TRB_HUE" message="tns:IGamWs_ListaGet_TRB_HUE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/ListaGet_TRB_HUEResponse" message="tns:IGamWs_ListaGet_TRB_HUE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendCoordinatesBatch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/SendCoordinatesBatch" message="tns:IGamWs_SendCoordinatesBatch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/SendCoordinatesBatchResponse" message="tns:IGamWs_SendCoordinatesBatch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendCoordinates">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/SendCoordinates" message="tns:IGamWs_SendCoordinates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/SendCoordinatesResponse" message="tns:IGamWs_SendCoordinates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_ControlLicencias">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/SendEmail_ControlLicencias" message="tns:IGamWs_SendEmail_ControlLicencias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/SendEmail_ControlLicenciasResponse" message="tns:IGamWs_SendEmail_ControlLicencias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizarParadas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/SincronizarParadas" message="tns:IGamWs_SincronizarParadas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/SincronizarParadasResponse" message="tns:IGamWs_SincronizarParadas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizarAgenda">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/SincronizarAgenda" message="tns:IGamWs_SincronizarAgenda_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/SincronizarAgendaResponse" message="tns:IGamWs_SincronizarAgenda_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizarControlLicencias">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/SincronizarControlLicencias" message="tns:IGamWs_SincronizarControlLicencias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/SincronizarControlLicenciasResponse" message="tns:IGamWs_SincronizarControlLicencias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendVersion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/SendVersion" message="tns:IGamWs_SendVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/SendVersionResponse" message="tns:IGamWs_SendVersion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosDIRByCodi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/GetDatosDIRByCodi" message="tns:IGamWs_GetDatosDIRByCodi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/GetDatosDIRByCodiResponse" message="tns:IGamWs_GetDatosDIRByCodi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosSRVByCodi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/GetDatosSRVByCodi" message="tns:IGamWs_GetDatosSRVByCodi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/GetDatosSRVByCodiResponse" message="tns:IGamWs_GetDatosSRVByCodi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpresaDefault">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/GetEmpresaDefault" message="tns:IGamWs_GetEmpresaDefault_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/GetEmpresaDefaultResponse" message="tns:IGamWs_GetEmpresaDefault_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetChekpoint">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/SetChekpoint" message="tns:IGamWs_SetChekpoint_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/SetChekpointResponse" message="tns:IGamWs_SetChekpoint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Unban">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/Unban" message="tns:IGamWs_Unban_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/UnbanResponse" message="tns:IGamWs_Unban_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SRV_UpdateServicio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/SRV_UpdateServicio" message="tns:IGamWs_SRV_UpdateServicio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/SRV_UpdateServicioResponse" message="tns:IGamWs_SRV_UpdateServicio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Missatges_NewServicio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/Missatges_NewServicio" message="tns:IGamWs_Missatges_NewServicio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/Missatges_NewServicioResponse" message="tns:IGamWs_Missatges_NewServicio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Missatges_NewParadaBus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/Missatges_NewParadaBus" message="tns:IGamWs_Missatges_NewParadaBus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/Missatges_NewParadaBusResponse" message="tns:IGamWs_Missatges_NewParadaBus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaGetNomVhiByCodi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/ListaGetNomVhiByCodi" message="tns:IGamWs_ListaGetNomVhiByCodi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/ListaGetNomVhiByCodiResponse" message="tns:IGamWs_ListaGetNomVhiByCodi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnvioLogTablet_Osoft">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGamWs/EnvioLogTablet_Osoft" message="tns:IGamWs_EnvioLogTablet_Osoft_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGamWs/EnvioLogTablet_OsoftResponse" message="tns:IGamWs_EnvioLogTablet_Osoft_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IGamWs" type="tns:IGamWs">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TramasGetByCodiVhi">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/TramasGetByCodiVhi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TramaConfirm">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/TramaConfirm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstatServicio">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/EstatServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstatFoto">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/EstatFoto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mensaje">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/Mensaje" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InicioTurno">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/InicioTurno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinalTurno">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/FinalTurno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Parada">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/Parada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Gastos">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/Gastos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncidenciaVehiculo">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/IncidenciaVehiculo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncidenciaServicio">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/IncidenciaServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudDiaPersonal">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/SolicitudDiaPersonal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Checklist">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/Checklist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNomTrbByCodi">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/GetNomTrbByCodi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNomTrbByCodiEgar">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/GetNomTrbByCodiEgar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLista_Servicios">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/GetLista_Servicios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLista_Lotes">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/GetLista_Lotes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLista_Direcciones">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/GetLista_Direcciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLista_Poblaciones">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/GetLista_Poblaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLista_DIG">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/GetLista_DIG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLista_TRA">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/GetLista_TRA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLista_TVH">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/GetLista_TVH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLista_Empresa">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/GetLista_Empresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaGet_TRB_HUE">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/ListaGet_TRB_HUE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCoordinatesBatch">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/SendCoordinatesBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCoordinates">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/SendCoordinates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_ControlLicencias">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/SendEmail_ControlLicencias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizarParadas">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/SincronizarParadas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizarAgenda">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/SincronizarAgenda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizarControlLicencias">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/SincronizarControlLicencias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendVersion">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/SendVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosDIRByCodi">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/GetDatosDIRByCodi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosSRVByCodi">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/GetDatosSRVByCodi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpresaDefault">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/GetEmpresaDefault" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetChekpoint">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/SetChekpoint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Unban">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/Unban" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRV_UpdateServicio">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/SRV_UpdateServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Missatges_NewServicio">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/Missatges_NewServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Missatges_NewParadaBus">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/Missatges_NewParadaBus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaGetNomVhiByCodi">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/ListaGetNomVhiByCodi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnvioLogTablet_Osoft">
+      <soap:operation soapAction="http://tempuri.org/IGamWs/EnvioLogTablet_Osoft" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GamWs">
+    <wsdl:port name="BasicHttpBinding_IGamWs" binding="tns:BasicHttpBinding_IGamWs">
+      <soap:address location="http://roma/GamWs/GamWs.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

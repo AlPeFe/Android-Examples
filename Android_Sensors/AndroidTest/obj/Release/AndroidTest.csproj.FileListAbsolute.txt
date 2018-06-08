@@ -1,0 +1,15 @@
+C:\Users\Alex\Documents\Visual Studio 2017\Projects\AndroidTest\AndroidTest\bin\Release\AndroidTest.dll
+C:\Users\Alex\Documents\Visual Studio 2017\Projects\AndroidTest\AndroidTest\bin\Release\AndroidTest.pdb
+C:\Users\Alex\Documents\Visual Studio 2017\Projects\AndroidTest\AndroidTest\bin\Release\AndroidTest.AndroidTest.apk
+C:\Users\Alex\Documents\Visual Studio 2017\Projects\AndroidTest\AndroidTest\bin\Release\AndroidTest.AndroidTest-Signed.apk
+C:\Users\Alex\Documents\Visual Studio 2017\Projects\AndroidTest\AndroidTest\obj\Release\AndroidTest.csprojResolveAssemblyReference.cache
+C:\Users\Alex\Documents\Visual Studio 2017\Projects\AndroidTest\AndroidTest\obj\Release\AndroidTest.csproj.CoreCompileInputs.cache
+C:\Users\Alex\Documents\Visual Studio 2017\Projects\AndroidTest\AndroidTest\obj\Release\AndroidTest.dll
+C:\Users\Alex\Documents\Visual Studio 2017\Projects\AndroidTest\AndroidTest\obj\Release\AndroidTest.pdb
+C:\Users\Alex\Documents\Visual Studio 2017\Projects\AndroidTest\AndroidTest\obj\Release\android\bin\AndroidTest.AndroidTest.apk
+C:\Users\Alex\Documents\Visual Studio 2017\Projects\AndroidTest\AndroidTest\obj\Release\res\layout\main.xml
+C:\Users\Alex\Documents\Visual Studio 2017\Projects\AndroidTest\AndroidTest\obj\Release\res\values\strings.xml
+C:\Users\Alex\Documents\Visual Studio 2017\Projects\AndroidTest\AndroidTest\obj\Release\R.cs.flag
+C:\Users\Alex\Documents\Visual Studio 2017\Projects\AndroidTest\AndroidTest\obj\Release\uploadflags.txt
+C:\Users\Alex\Documents\Visual Studio 2017\Projects\AndroidTest\AndroidTest\bin\Release\AndroidTest.dll.mdb
+C:\Users\Alex\Documents\Visual Studio 2017\Projects\AndroidTest\AndroidTest\obj\Release\android\assets\AndroidTest.dll.mdb
